@@ -42,10 +42,12 @@ export default function FormationsForm() {
     email: "",
     formation: "",
   });
+  const [errorMessage, setErrorMessage] = useState(false);
 
   function onChangeInputs(e) {
     const name = e.target.name;
     const value = e.target.value;
+    !!value.length && setErrorMessage(false);
 
     setUser((prevUser) => ({
       ...prevUser,
@@ -73,26 +75,35 @@ export default function FormationsForm() {
               onChange={onChangeInputs}
               value={user[input.name]}
               required
+              onFocus={() =>
+                setErrorMessage({ ...errorMessage, [index]: false })
+              }
+              onBlur={() =>
+                user[input.name]?.length === 0 &&
+                setErrorMessage({ ...errorMessage, [index]: true })
+              }
             />
-            {!!user[input.name]?.length && (
-              <div className="status">
-                {user[input.name]?.length > 3 ? (
+            <div className="status">
+              {errorMessage[index] ? (
+                <FontAwesomeIcon
+                  icon={faExclamation}
+                  size="xl"
+                  style={{ color: "red" }}
+                />
+              ) : (
+                user[input.name]?.length > 2 && (
                   <FontAwesomeIcon
                     icon={faCircleCheck}
                     size="xl"
                     style={{ color: "green" }}
                   />
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faExclamation}
-                    size="xl"
-                    style={{ color: "red" }}
-                  />
-                )}
-              </div>
-            )}
+                )
+              )}
+            </div>
           </div>
-          {/* <p style={{ color: "red" }}>Ce champ est obligatoire.</p> */}
+          {errorMessage[index] && (
+            <p style={{ color: "red" }}>Ce champ est obligatoire.</p>
+          )}
         </div>
       ))}
       <div className="input-content">

@@ -69,10 +69,10 @@ function Formations() {
           <div className="location">
             <div className="title">localisation</div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d337324.481726146!2d3.174962!3d36.737246!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e5305531cebfb%3A0x748f95878587df15!2zVGVjaG1vbG9neSDYqtmK2YPZhdmI2YTZiNis2YrYpw!5e1!3m2!1sfr!2sus!4v1707125120931!5m2!1sfr!2sus"
-              allowFullScreen=""
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d86034.65410257108!2d3.4309139571960765!3d36.73980257222857!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128e5305531cebfb%3A0x748f95878587df15!2zVGVjaG1vbG9neSDYqtmK2YPZhdmI2YTZiNis2YrYpw!5e0!3m2!1sfr!2sus!4v1707320414413!5m2!1sfr!2sus"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen=""
             ></iframe>
           </div>
         </div>

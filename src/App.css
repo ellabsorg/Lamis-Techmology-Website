@@ -502,7 +502,7 @@ form.formations-form .input-content .input-container .status {
 }
 
 form.formations-form .input-content textarea {
-  height: 200px;
+  height: 100px;
   font-weight: 500;
   color: black;
   padding: 15px;
@@ -531,6 +531,25 @@ form.formations-form .submit:hover {
   width: 500px;
   height: 450px;
   border: none;
+}
+/* ----------------------------------------- */
+
+.not-found-section {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 60px;
+}
+.not-found-container {
+  max-width: 1368px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ----------------------------------------- */
