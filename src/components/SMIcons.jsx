@@ -9,10 +9,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function SMIcons({ size }) {
   const iconsList = [
-    { icon: faLinkedin, path: "https://www.linkedin.com/" },
-    { icon: faFacebook, path: "https://www.facebook.com/" },
-    { icon: faInstagram, path: "https://www.instagram.com/" },
-    { icon: faYoutube, path: "https://www.youtube.com/" },
+    { icon: faLinkedin, path: "https://dz.linkedin.com/company/techmology" },
+    { icon: faFacebook, path: "https://www.facebook.com/techmlg" },
+    { icon: faInstagram, path: "https://www.instagram.com/tech.mology/?hl=en" },
+    {
+      icon: faYoutube,
+      path: "https://www.youtube.com/results?search_query=techmology",
+    },
   ];
   return (
     <div className="icons">

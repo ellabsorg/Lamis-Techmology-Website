@@ -1,0 +1,18 @@
+.not-found-section {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 60px;
+}
+
+.not-found-container {
+  max-width: 1368px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+}

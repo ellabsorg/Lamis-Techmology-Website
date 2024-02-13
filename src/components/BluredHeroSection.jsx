@@ -1,4 +1,6 @@
 import React from "react";
+import "./blured-hero-section.css";
+
 
 function BluredHeroSection({ title, text }) {
   return (

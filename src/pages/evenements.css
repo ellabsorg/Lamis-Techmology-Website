@@ -1,0 +1,108 @@
+.evenements-content {
+  color: white;
+}
+
+.event-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event-content {
+  max-width: 1368px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+  padding: 50px 100px;
+  color: white;
+}
+
+.evenements-content .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.evenements-content .left .title {
+  font-size: 28px;
+}
+
+.evenements-content .left .date-location {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.evenements-content .left .date-location svg {
+  margin-right: 10px;
+  color: #09c699;
+}
+
+.decouvrire {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.decouvrire a button {
+  border: 3px solid #09c699;
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.decouvrire a button:hover {
+  background-color: #09c699;
+}
+.decouvrire a svg {
+  color: #186dd3;
+}
+
+.decouvrire a svg:hover {
+  color: #09c699;
+}
+.evenements-content .left .text {
+  text-align: justify;
+}
+.evenements-content .left .statics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.evenements-content .left .statics button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #09c699;
+  background-color: black;
+  color: white;
+  width: 120px;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.evenements-content .left .statics button .number {
+  font-weight: 700;
+  font-size: 20px;
+}
+.evenements-content .left .statics button .text {
+  font-weight: 500;
+}
+
+.evenements-content .right {
+  width: 50%;
+}

@@ -6,77 +6,72 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function FormatiosLinks() {
   const links = [
     {
-      name: "kids",
-      path: "/kids",
+      label: "kids",
       dropDown: [
         {
-          name: "robotique",
-          to: "/robotique",
+          label: "robotique",
+          path: "/robotique",
         },
         {
-          name: "Programmation Intelligence Artificielle",
-          to: "/programmation-intelligence-artificielle",
+          label: "Programmation Intelligence Artificielle",
+          path: "/programmation-intelligence-artificielle",
         },
         {
-          name: "Sciences et Chimie",
-          to: "/sciences-et-chimie",
+          label: "Sciences et Chimie",
+          path: "/sciences-et-chimie",
         },
       ],
     },
     {
-      name: "robotique & electronique",
-      path: "/robotique-electronique",
+      label: "robotique & electronique",
       dropDown: [
         {
-          name: "arduino",
-          to: "/arduino",
+          label: "arduino",
+          path: "/arduino",
         },
         {
-          name: "IOT",
-          to: "/IOT",
+          label: "IOT",
+          path: "/IOT",
         },
         {
-          name: "PCB",
-          to: "/PCB",
+          label: "PCB",
+          path: "/PCB",
         },
       ],
     },
     {
-      name: "programmation",
-      path: "/programmation",
+      label: "programmation",
       dropDown: [
         {
-          name: "C++",
-          to: "/C++",
+          label: "C++",
+          path: "/C++",
         },
         {
-          name: "Programmation Oriente Objet",
-          to: "/programmation-oriente-objet",
+          label: "Programmation Oriente Objet",
+          path: "/programmation-oriente-objet",
         },
       ],
     },
     {
-      name: "développement software",
-      path: "/developpement-software",
+      label: "développement software",
       dropDown: [
         {
-          name: "Développement Web",
-          to: "/développement-web",
+          label: "Développement Web",
+          path: "/développement-web",
         },
       ],
     },
-    { name: "design", path: "/", dropDown: [] },
+    { label: "design", path: "/", dropDown: [] },
     {
-      name: "soft skills",
-      path: "/soft-skills",
+      label: "soft skills",
       dropDown: [
         {
-          name: "digital marketing",
-          to: "/digital-marketing",
+          label: "digital marketing",
+          path: "/digital-marketing",
         },
       ],
     },
-    { name: "training for trainers", path: "/", dropDown: [] },
+    { label: "training for trainers", path: "/", dropDown: [] },
   ];
   const [showDropDown, setShowDropDown] = useState({});
 
@@ -93,7 +88,7 @@ function FormatiosLinks() {
               setShowDropDown({ ...showDropDown, [index]: false })
             }
           >
-            {link.name}
+            {link.label}
             {!!link.dropDown.length && <FontAwesomeIcon icon={faCaretDown} />}
           </div>
 
@@ -108,8 +103,8 @@ function FormatiosLinks() {
               }
             >
               {link.dropDown.map((item, index) => (
-                <Link to={`/formations${link.path + item.to}`} key={index}>
-                  {item.name}
+                <Link to={`/formations${item.path}`} key={index}>
+                  {item.label}
                 </Link>
               ))}
             </div>

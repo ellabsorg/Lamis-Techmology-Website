@@ -17,16 +17,13 @@ function App() {
   return (
     <>
       <Router>
-         <Navbar />
+        <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/a-propos" element={<Apropos />} />
           <Route path="/produits" element={<Produits />} />
           <Route path="/formations" element={<Formations />} />
-          <Route
-            path="/formations/:category/:formation"
-            element={<FormationDetails />}
-          />
+          <Route path="/formations/:formation" element={<FormationDetails />} />
           <Route path="/404" element={<NotFound404 />} />
           <Route path="/evenements" element={<Evenements />} />
           <Route path="/contact" element={<Contact />} />

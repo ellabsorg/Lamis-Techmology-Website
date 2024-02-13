@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import formations from "../constants/fomations";
 import formation_mapper from "../constants/formation_mapper";
 import FormationsSwiper from "../components/FormationsSwiper";
-import { Navigate, useParams } from "react-router-dom";
-import NotFound404 from "../components/NotFound404";
+import { useParams } from "react-router-dom";
+import "./formation-details.css";
 
 function FormationDetails() {
-  const { category, formation } = useParams();
-  const data = formations[category][formation_mapper[formation]?.id - 1];
+  const { formation } = useParams();
+  const data = formations[formation_mapper[formation]?.id - 1];
 
   const [show, setShow] = useState({});
   const toggleNiveau = (index) => {
@@ -24,58 +24,116 @@ function FormationDetails() {
       <div className="container formation-details-container">
         <div className="left">
           <h1 className="title">{data?.title}</h1>
-          {data?.text?.map((paragraph, index) => (
+          {data?.description?.map((paragraph, index) => (
             <p className="text" key={index}>
               {paragraph}
             </p>
           ))}
           <button>S'inscrire</button>
         </div>
-        <div className="right">
-          <FormationsSwiper slidesPerView={1} />
-        </div>
+        {formation === "robotique" && (
+          <div className="right">
+            <FormationsSwiper slidesPerView={1} />
+          </div>
+        )}
       </div>
       <div className="buts-container">
         <h1 className="title">Buts du formation</h1>
         <ul className="list">
-          {data?.buts.map((item, index) => (
-            <li key={index}>{item}</li>
+          {data?.goals.map((item) => (
+            <li key={item.id}>{item.goal}</li>
           ))}
         </ul>
       </div>
-      {!!data?.niveaux?.length && (
+      {data?.multiple ? (
         <div className="buts-container">
           <h1 className="title">Niveaux</h1>
           <div className="niveaux-container">
-            {data?.niveaux?.map((niveau, index) => (
-              <div className="niveau" key={index}>
+            {data?.levels?.map((level) => (
+              <div className="niveau  " key={level.id}>
                 <div
                   className="niveau-title"
-                  onClick={() => toggleNiveau(index)}
+                  onClick={() => toggleNiveau(level.id)}
                 >
                   <FontAwesomeIcon
-                    icon={!show[index] ? faCaretRight : faCaretUp}
+                    icon={!show[level.id] ? faCaretRight : faCaretUp}
                   />
-                  <h4>{niveau.title}</h4>
+                  <h4>{level.name}</h4>
                 </div>
-                {show[index] && (
+                {show[level.id] && (
                   <div className="niveau-details">
-                    {niveau?.sections?.map((section, subIndex) => (
-                      <div key={subIndex} className="section">
-                        <h2 className="section-title">{section.title}</h2>
-                        <p>{section.text}</p>
+                    {level?.description && (
+                      <div className="section">
+                        <h2 className="section-title">
+                          Descriptions de la formation:
+                        </h2>
+                        <p>{level.description}</p>
+                      </div>
+                    )}
+                    {level?.details && (
+                      <div className="section">
+                        <h2 className="section-title">
+                          Détailles de la formation:
+                        </h2>
                         <ul className="section-list">
-                          {section?.list?.map((item, index) => (
-                            <li key={index}>{item}</li>
+                          {level?.details?.map((item) => (
+                            <li key={item.id}>{item.description}</li>
                           ))}
                         </ul>
                       </div>
-                    ))}
+                    )}
+                    <div className="section">
+                      {level?.description && (
+                        <h2 className="section-title">
+                          Programme de la formation:
+                        </h2>
+                      )}
+                      <ul className="section-list">
+                        {level?.programme?.map((item) => (
+                          <li key={item.id}>
+                            {item.description}
+                            <ul>
+                              {item?.subDescription?.map((subList) => (
+                                <li key={item.id}>{subList.description}</li>
+                              ))}
+                            </ul>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 )}
               </div>
             ))}
           </div>
+        </div>
+      ) : (
+        <div className="buts-container">
+          <h1 className="title">Programme</h1>
+          <div className="niveaux-container">
+            {data?.programme?.map((item) => (
+              <div className="niveau" key={item.id}>
+                <li key={item.id}>
+                  {item.description}
+                  <ul>
+                    {item?.subDescription?.map((subList) => (
+                      <li key={item.id}>{subList.description}</li>
+                    ))}
+                  </ul>
+                </li>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      {data?.details && (
+        <div className="buts-container">
+          <h2 className="title">Détailles de la formation:</h2>
+          <ul className="section-list">
+            {data?.details?.map((item) => (
+              <li key={item.id}>{item.description}</li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

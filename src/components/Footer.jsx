@@ -1,15 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-import {
-  faLinkedin,
-  faFacebook,
-  faInstagram,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SMIcons from "./SMIcons";
 import NavLinks from "./NavLinks";
+import "./footer.css"
 
 function Footer() {
   return (
