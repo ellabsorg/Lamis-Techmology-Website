@@ -1,0 +1,35 @@
+.partners-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-content {
+  max-width: 1368px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-content .title {
+  color: white;
+  font-size: 28px;
+}
+
+.partnersSwiper {
+  width: 90%;
+  height: 150px;
+}
+.partnersSwiper .slider {
+  display: flex;
+  justify-content: center;
+}
+
+.slider img {
+  width: 150px;
+  height: 150px;
+}

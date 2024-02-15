@@ -1,5 +1,5 @@
 import React from "react";
-import BluredHeroSection from "../components/BluredHeroSection";
+import BluredHeroSection from "../components/Shared/Blured-Hero-Section/BluredHeroSection";
 import { faCalendar, faLocation } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./evenements.css";

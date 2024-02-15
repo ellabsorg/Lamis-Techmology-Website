@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-
+import "./partners-swiper.css";
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -24,24 +24,24 @@ function PartnersSwiper() {
     "Wamda",
   ];
   return (
-      <Swiper
-        slidesPerView={3}
-        centeredSlides={true}
-        navigation
-        loop
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay, Navigation]}
-        className="partnersSwiper"
-      >
-        {partners.map((partner, index) => (
-          <SwiperSlide className="slider" key={index}>
-            <img src={`/img/partners/${partner}.png`} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+    <Swiper
+      slidesPerView={3}
+      centeredSlides={true}
+      navigation
+      loop
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      modules={[Autoplay, Navigation]}
+      className="partnersSwiper"
+    >
+      {partners.map((partner, index) => (
+        <SwiperSlide className="slider" key={index}>
+          <img src={`/img/partners/${partner}.png`} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
 

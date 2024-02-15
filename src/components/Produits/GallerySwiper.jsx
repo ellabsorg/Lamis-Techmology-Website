@@ -5,6 +5,7 @@ import {
   faClose,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./gallery-swiper.css";
 
 function GallerySwiper({
   gallery,
@@ -12,9 +13,8 @@ function GallerySwiper({
   setSelectedImageId,
   showGallerySwiper,
   setShowGallerySwiper,
-  selectedImageSrc
+  selectedImageSrc,
 }) {
-
   const prevSlider = () => {
     if (selectedImageId > 0) {
       setSelectedImageId(selectedImageId - 1);
@@ -57,7 +57,9 @@ function GallerySwiper({
           size="2xl"
           className="right-arrow"
           onClick={() => nextSlider()}
-          style={{ visibility: selectedImageId >= gallery.length - 1 && "hidden" }}
+          style={{
+            visibility: selectedImageId >= gallery.length - 1 && "hidden",
+          }}
         />
 
         {/* --------------------------- */}

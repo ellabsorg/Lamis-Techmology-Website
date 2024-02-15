@@ -5,27 +5,26 @@ import {
   faExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Input({
+function TextArea({
   name,
   label,
-  type,
-  formData,
+  required,
+  value,
   handleChange,
   validateForm,
   isError,
   errorMessage,
 }) {
   return (
-    <div className="input-content">
+    <div className="textArea-content">
       <div className="label-container">
         <label>{label}</label>
-        <div className="label-required">*</div>
+        {required && <div className="label-required">*</div>}
       </div>
-      <div className="input-container">
-        <input
+      <div className="textarea-container">
+        <textarea
           name={name}
-          type={type}
-          value={formData}
+          value={value}
           onChange={(e) => handleChange(e)}
           onBlur={() => validateForm(name)}
         />
@@ -37,7 +36,7 @@ function Input({
               style={{ color: "green" }}
             />
           ) : (
-            formData?.trim() && (
+            value?.trim() && (
               <FontAwesomeIcon
                 icon={faExclamation}
                 size="xl"
@@ -47,9 +46,9 @@ function Input({
           )}
         </div>
       </div>
-      {!isError && <p className="error-message">{errorMessage}</p>}
+      {!isError && required && <p className="error-message">{errorMessage}</p>}
     </div>
   );
 }
 
-export default Input;
+export default TextArea;

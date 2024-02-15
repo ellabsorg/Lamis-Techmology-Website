@@ -1,0 +1,31 @@
+.navbar-section {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  display: flex;
+}
+
+.navbar-container {
+  max-width: 1368px;
+  min-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.navbar-container .logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container .logo img {
+  height: 80%;
+}

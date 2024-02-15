@@ -1,0 +1,116 @@
+.contact-content {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-social-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-social-content {
+  max-width: 1369px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px 100px;
+  box-sizing: border-box;
+  gap: 25px;
+}
+
+.contact-social-content .title::before {
+  content: "";
+  border-top: 5px solid #09c699;
+  width: 200px;
+  margin-top: -25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.contact-social-content .title::after {
+  content: "";
+  width: 250px;
+  height: 5px;
+  background-color: #09c699;
+  padding-top: 20px;
+  filter: blur(20px) opacity(0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+.contact-social-content .title {
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.contact-social-content .contact {
+  width: 40vw;
+}
+
+.contact-social-content .social .contacts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.contact-social-content .social .contacts .contact {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  font-display: column;
+  align-items: center;
+  border-bottom: 3px dotted rgba(255, 255, 255, 0.5);
+  padding: 20px 0;
+  width: 100%;
+}
+.contact-social-content .social .contacts .contact:last-child {
+  border-bottom: none;
+}
+
+.contact-social-content .social .contacts .contact svg {
+  margin-right: 20px;
+  color: #09c699;
+  width: 28px;
+  height: 28px;
+}
+
+/* ------------------------- */
+.location-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.location-content {
+  max-width: 1369px;
+  min-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 25px;
+  background-color: red;
+}
+
+.location-content iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}

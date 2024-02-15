@@ -1,15 +1,15 @@
 import "./app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Shared/Navbar/Navbar";
 import Home from "./pages/Home";
 import Apropos from "./pages/Apropos";
 import Formations from "./pages/Formations";
 import Produits from "./pages/Produits";
 import Evenements from "./pages/Evenements";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
+import Footer from "./components/Shared/Footer/Footer";
 import FormationDetails from "./pages/FormationDetails";
-import NotFound404 from "./components/NotFound404";
+import NotFound404 from "./components/Not-Found/NotFound404";
 
 function App() {
   const path = window.location.pathname;

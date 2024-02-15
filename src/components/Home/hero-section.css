@@ -1,0 +1,28 @@
+.hero-section {
+  background-image: url("/public/img/Video-capsules-vertes-et-bleues.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+  min-height: 500px;
+}
+
+.hero-content {
+  min-height: 500px;
+  align-items: center;
+}
+
+.hero-content .box {
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  border-radius: 40px 40px 0 40px;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero-content .title {
+  color: white;
+  font-size: 64px;
+  font-weight: 600;
+  margin-top: -80px;
+  margin-left: -20px;
+}

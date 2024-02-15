@@ -1,0 +1,15 @@
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons .icon {
+  color: #186dd3;
+  transition: all 0.2s;
+}
+
+.icons .icon:hover {
+  color: #09c699;
+  transform: scale(0.85);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import "./gallery.css";
 
 function Gallery({ gallery, setSelectedImageId, setShowGallerySwiper }) {
   return (

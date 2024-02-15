@@ -1,45 +1,48 @@
-.formations-form {
+form {
   color: white;
   width: 90%;
   display: flex;
   flex-direction: column;
 }
-.formations-form .name {
+form .name {
   display: flex;
   justify-content: space-between;
 }
-.formations-form .name .input-content {
+form .name .input-content {
   width: 48%;
 }
-.formations-form .input-content {
-  margin-bottom: 25px;
+
+form .input-content,
+form .textarea-content {
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.formations-form .input-content .label-container {
+form .label-container {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 2px;
 }
 
-.formations-form .input-content label {
+form .label-container label {
   font-weight: 700;
 }
-.formations-form .input-content .label-required {
+form .label-container .label-required {
   color: red;
   margin-left: 5px;
   margin-top: -5px;
   font-weight: 700;
   font-size: 20px;
 }
-.formations-form .input-content .input-container {
+form .input-container {
   height: 40px;
   position: relative;
   display: flex;
   margin-bottom: 5px;
 }
-.formations-form .input-content input {
+form .input-container input {
   font-weight: 600;
   padding: 8px 10px;
   border: none;
@@ -49,7 +52,23 @@
   box-sizing: border-box;
 }
 
-.formations-form .input-content .input-container .status {
+/* ---------------------- */
+form .textarea-container {
+  position: relative;
+}
+form .textarea-container textarea {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  font-weight: 500;
+  color: black;
+  padding: 8px 10px;
+  border: 1px solid black;
+  outline: none;
+  margin-top: 5px;
+}
+
+form .input-container .status {
   position: absolute;
   right: 0;
   height: 100%;
@@ -58,20 +77,22 @@
   justify-content: center;
   align-items: center;
 }
-.formations-form .input-content .error-message {
+
+form .textarea-container .status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .error-message {
   color: red;
 }
 
-.formations-form .input-content textarea {
-  height: 100px;
-  font-weight: 500;
-  color: black;
-  padding: 15px;
-  border: 1px solid black;
-  outline: none;
-}
-
-.formations-form .submit {
+form .submit {
   background-color: #09c699;
   padding: 15px 30px;
   border: none;
@@ -80,9 +101,9 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 50px;
 }
-.formations-form .submit:hover {
+form .submit:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
@@ -92,7 +113,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 1.5;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
   color: #fff !important;
   background-color: #09c699 !important;
   padding: 20px;
@@ -113,4 +134,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.submit-error {
+  color: red;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-top: 20px;
 }

@@ -3,7 +3,7 @@ import { faCaretRight, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import formations from "../constants/fomations";
 import formation_mapper from "../constants/formation_mapper";
-import FormationsSwiper from "../components/FormationsSwiper";
+import FormationsSwiper from "../components/Formations/FormationsSwiper";
 import { useParams } from "react-router-dom";
 import "./formation-details.css";
 

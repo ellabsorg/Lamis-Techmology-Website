@@ -1,14 +1,15 @@
 import React from "react";
-import BluredHeroSection from "../components/BluredHeroSection";
+import BluredHeroSection from "../components/Shared/Blured-Hero-Section/BluredHeroSection";
 import {
   faHandshake,
   faMessage,
   faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import FormatiosLinks from "../components/FormatiosLinks";
-import FormationsForm from "../components/FormationsForm";
-import FormationsSwiper from "../components/FormationsSwiper";
+import FormatiosLinks from "../components/Formations/FormatiosLinks";
+import FormationsForm from "../components/Formations/FormationsForm";
+import FormationsSwiper from "../components/Formations/FormationsSwiper";
+import "./formations.css";
 
 function Formations() {
   const heroSection = {
@@ -33,6 +34,7 @@ function Formations() {
       icon: faHandshake,
     },
   ];
+
   return (
     <div className="formations-content">
       <BluredHeroSection title={heroSection.title} text={heroSection.text} />

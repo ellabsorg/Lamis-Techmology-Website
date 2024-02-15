@@ -2,8 +2,9 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import "./navigation-links.css";
 
-function NavLinks({ showIcon }) {
+function NavigationLinks({ showIcon }) {
   const links = [
     { name: "accueil", path: "/" },
     { name: "à propos", path: "/a-propos" },
@@ -24,4 +25,4 @@ function NavLinks({ showIcon }) {
   );
 }
 
-export default NavLinks;
+export default NavigationLinks;

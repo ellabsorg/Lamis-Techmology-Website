@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./formations-links.css";
 
 function FormatiosLinks() {
   const links = [
@@ -76,7 +77,7 @@ function FormatiosLinks() {
   const [showDropDown, setShowDropDown] = useState({});
 
   return (
-    <div className="links">
+    <div className="formations-links">
       {links.map((link, index) => (
         <div key={index} className="link">
           <div

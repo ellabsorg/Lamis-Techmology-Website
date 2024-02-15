@@ -1,0 +1,65 @@
+.formations-links {
+  background-color: white;
+  width: 85%;
+  max-width: 1369px;
+  margin: auto;
+  padding: 20px 30px;
+  justify-content: space-between;
+  margin-top: -40px;
+  display: flex;
+}
+.formations-links .link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.formations-links .link .link-title {
+  gap: 10px;
+  height: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-transform: capitalize;
+  cursor: pointer;
+  padding: 15px 0;
+}
+
+.formations-links .link .link-title svg {
+  color: black;
+}
+
+.formations-links .link .link-title:hover svg {
+  color: #09c699;
+}
+
+.dropDown {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 220px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  display: flex;
+  z-index: 100;
+}
+
+.dropDown a {
+  color: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+.dropDown a:hover {
+  color: #09c699;
+}

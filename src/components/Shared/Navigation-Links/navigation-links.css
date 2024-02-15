@@ -1,0 +1,22 @@
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: black;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.link:hover {
+  color: #09c699;
+}
+    

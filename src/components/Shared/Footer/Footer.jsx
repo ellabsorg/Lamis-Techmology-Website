@@ -1,7 +1,7 @@
 import React from "react";
-import SMIcons from "./SMIcons";
-import NavLinks from "./NavLinks";
-import "./footer.css"
+import SMIcons from "../Social-Media-Icons/SocialMediaIcons";
+import NavLinks from "../Navigation-Links/NavigationLinks";
+import "./footer.css";
 
 function Footer() {
   return (

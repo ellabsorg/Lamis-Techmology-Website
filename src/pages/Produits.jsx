@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BluredHeroSection from "../components/BluredHeroSection";
-import Gallery from "../components/Gallery";
-import GallerySwiper from "../components/GallerySwiper";
+import BluredHeroSection from "../components/Shared/Blured-Hero-Section/BluredHeroSection";
+import Gallery from "../components/Produits/Gallery";
+import GallerySwiper from "../components/Produits/GallerySwiper";
 
 function Produits() {
   const heroSection = {

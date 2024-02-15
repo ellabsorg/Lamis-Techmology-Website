@@ -1,0 +1,70 @@
+.gallery-Swiper-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 999999;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.gallery-Swiper-section.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-Swiper-content {
+  max-width: 1368px;
+  min-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: all 0.5s;
+}
+.gallery-Swiper-content.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.gallery-Swiper-content img {
+  width: 400px;
+  height: 400px;
+}
+
+.gallery-Swiper-section .left-arrow,
+.gallery-Swiper-section .right-arrow {
+  opacity: 0;
+  user-select: none;
+  color: rgb(255, 0, 0);
+}
+
+.gallery-Swiper-section:hover .left-arrow,
+.gallery-Swiper-section:hover .right-arrow {
+  opacity: 1;
+  cursor: pointer;
+  color: white;
+}
+
+.hide-gallery-swiper {
+  position: fixed;
+  top: -60px;
+  right: -80px;
+  color: rgb(255, 255, 255, 0.5);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.hide-gallery-swiper:hover {
+  color: rgb(255, 255, 255);
+}

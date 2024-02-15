@@ -2,9 +2,11 @@ import React from "react";
 import { faBox, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarCheck } from "@fortawesome/free-regular-svg-icons";
-import FeedniSwiper from "../components/FeedniSwiper";
-import PartnersSwiper from "../components/PartnersSwiper";
+import FeedniSwiper from "../components/Home/FeedniSwiper";
+import PartnersSwiper from "../components/Home/PartnersSwiper";
 import { Link } from "react-router-dom";
+import "./home.css";
+import HeroSection from "../components/Home/HeroSection";
 
 function Home() {
   const heroSectionIcons = [
@@ -14,24 +16,18 @@ function Home() {
   ];
   return (
     <div className="content home-content">
-      <div className=" section hero-section">
-        <div className="container hero-content">
-          <div className="box"></div>
-          <div className="title">
-            The <br /> Effective <br />
-            Science.
-          </div>
-        </div>
-      </div>
+      <HeroSection />
+
       <div className="container action-btns">
         {heroSectionIcons.map((item, index) => (
-          <Link to={item.name}  key={index}>
+          <Link to={item.name} key={index}>
             <button className="action-btn">
               <FontAwesomeIcon icon={item.icon} size="2xl" /> {item.name}
             </button>
           </Link>
         ))}
       </div>
+      
       <div className="section feedni-section">
         <div className="container feedni-content">
           <div className="left">

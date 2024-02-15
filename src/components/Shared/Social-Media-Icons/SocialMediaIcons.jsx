@@ -7,7 +7,9 @@ import {
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-function SMIcons({ size }) {
+import './social-media-icons.css'
+
+function SocialMediaIcons({ size }) {
   const iconsList = [
     { icon: faLinkedin, path: "https://dz.linkedin.com/company/techmology" },
     { icon: faFacebook, path: "https://www.facebook.com/techmlg" },
@@ -28,4 +30,4 @@ function SMIcons({ size }) {
   );
 }
 
-export default SMIcons;
+export default SocialMediaIcons;
