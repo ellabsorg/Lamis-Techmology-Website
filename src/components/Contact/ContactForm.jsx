@@ -172,12 +172,17 @@ export default function ContactForm() {
         />
       )}
 
-      {!submitSuccess && submitClicked && (
-        <p className="submit-error">
-          Un ou plusieurs champs contiennent des erreurs. Veuillez vérifier et
-          réessayer à nouveau.
-        </p>
-      )}
+      {submitClicked &&
+        (!lastNameValidation ||
+          // !phoneNumberValidation ||
+          !emailValidation ||
+          !formationValidation ||
+          !messageValidation) && (
+          <p className="submit-error">
+            Un ou plusieurs champs contiennent des erreurs. Veuillez vérifier et
+            réessayer à nouveau.
+          </p>
+        )}
     </form>
   );
 }

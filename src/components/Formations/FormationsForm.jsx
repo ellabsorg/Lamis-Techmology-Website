@@ -182,20 +182,20 @@ export default function FormationsForm() {
           <div className="spinner" />
         </div>
       ) : (
-        <input
-          className="submit"
-          type="submit"
-          value="Envoyer"
-          disabled={submitSuccess}
-        />
+        <input className="submit" type="submit" value="Envoyer" />
       )}
 
-      {!submitSuccess && submitClicked && (
-        <p className="submit-error">
-          Un ou plusieurs champs contiennent des erreurs. Veuillez vérifier et
-          réessayer à nouveau.
-        </p>
-      )}
+      {submitClicked &&
+        (!firstNameValidation ||
+          !lastNameValidation ||
+          !phoneNumberValidation ||
+          !emailValidation ||
+          !formationValidation) && (
+          <p className="submit-error">
+            Un ou plusieurs champs contiennent des erreurs. Veuillez vérifier et
+            réessayer à nouveau.
+          </p>
+        )}
     </form>
   );
 }
