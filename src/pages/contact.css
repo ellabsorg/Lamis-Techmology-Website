@@ -106,7 +106,6 @@
   align-items: flex-start;
   box-sizing: border-box;
   gap: 25px;
-  background-color: red;
 }
 
 .location-content iframe {

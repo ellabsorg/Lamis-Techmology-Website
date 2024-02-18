@@ -16,7 +16,12 @@ function NavigationLinks({ showIcon }) {
   return (
     <div className="links">
       {links.map((link, index) => (
-        <Link to={link.path} key={index} className="link">
+        <Link
+          to={link.path}
+          key={index}
+          className="link"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           {showIcon && <FontAwesomeIcon icon={faCaretRight} />}
           {link.name}
         </Link>
