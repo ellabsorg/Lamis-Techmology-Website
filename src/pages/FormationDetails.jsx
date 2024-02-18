@@ -37,7 +37,7 @@ function FormationDetails() {
           </div>
         )}
       </div>
-      <div className="buts-container">
+      <div className="container buts-container">
         <h1 className="title">Buts du formation</h1>
         <ul className="list">
           {data?.goals.map((item) => (
@@ -46,7 +46,7 @@ function FormationDetails() {
         </ul>
       </div>
       {data?.multiple ? (
-        <div className="buts-container">
+        <div className="container buts-container">
           <h1 className="title">Niveaux</h1>
           <div className="niveaux-container">
             {data?.levels?.map((level) => (
@@ -108,7 +108,7 @@ function FormationDetails() {
           </div>
         </div>
       ) : (
-        <div className="buts-container">
+        <div className="container buts-container">
           <h1 className="title">Programme</h1>
           <div className="niveaux-container">
             {data?.programme?.map((item) => (
@@ -127,7 +127,7 @@ function FormationDetails() {
         </div>
       )}
       {data?.details && (
-        <div className="buts-container">
+        <div className=" container buts-container">
           <h2 className="title">Détailles de la formation:</h2>
           <ul className="section-list">
             {data?.details?.map((item) => (

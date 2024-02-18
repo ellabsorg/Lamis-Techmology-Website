@@ -101,7 +101,7 @@ export default function FormationsForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
@@ -186,8 +186,8 @@ export default function FormationsForm() {
       )}
 
       {submitClicked &&
-        (!firstNameValidation ||
-          !lastNameValidation ||
+        (!lastNameValidation ||
+          !firstNameValidation ||
           !phoneNumberValidation ||
           !emailValidation ||
           !formationValidation) && (
