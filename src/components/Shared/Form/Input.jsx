@@ -16,6 +16,7 @@ function Input({
   isError,
   errorMessage,
 }) {
+  // console.log({ isError });
   return (
     <div className="input-content">
       <div className="label-container">

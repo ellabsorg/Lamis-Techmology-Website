@@ -40,10 +40,13 @@ export default function FormationsForm() {
 
   const validateForm = (name) => {
     const value = formData[name]?.trim();
-    let error = null;
+    let error;
     if (!value) {
       error = "Ce champ est obligatoire.";
-    } else if (value?.length < 4 && (name !== "phoneNumber" || "email")) {
+    } else if (
+      (name === "lastName" || name === "firstName" || name === "formation") &&
+      value?.length < 3
+    ) {
       error = "Ce champ doit contenir au moins 3 caractères.";
     } else if (name === "phoneNumber" && !phoneNumberValidation) {
       error = "Le numéro de téléphone doit contenir 10 chiffres.";
